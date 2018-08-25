@@ -1,35 +1,40 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 // import PropTypes from 'prop-types'
-import { } from 'antd'
-// import {connect} from 'react-redux'
-// import {} from '@actions/xxx'
+import {} from 'antd'
+import WebSocket from 'react-websocket'
 
-// @connect((storeState)=>({}))
 
 export default class app extends Component {
-  static defaultProps={
-  }
+    static defaultProps = {}
 
-  static propTypes = {
-  }
+    static propTypes = {}
 
-  constructor(props) {
-    super(props)
-    this.state = {}
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            url: 'ws://localhost:8088/reader'
+        }
+    }
 
-  componentDidMount() {}
+    componentDidMount() {
+    }
 
-  // region vscode 1.17的收缩代码块功能  业务代码
+    // region vscode 1.17的收缩代码块功能  业务代码
 
 
-  // endregion
+    // endregion
 
-  render() {
-    return (
-      <div className="page">
-        示范页面
-      </div>
-    )
-  }
+    _onMessage(message) {
+        console.log('message=>', message)
+
+    }
+
+    render() {
+        return (
+            <div className="page">
+                示范页面
+                <WebSocket url={this.state.url} onMessage={this._onMessage.bind(this)}/>
+            </div>
+        )
+    }
 }

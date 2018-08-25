@@ -6,11 +6,11 @@ import '@config'
 import Routes from '@configs/router.config'
 import configure from '@middleware/configureStore'
 
-const store = configure({ })
+const store = configure({ });
 
 ReactDOM.render(
   <Provider store={store}>
     <Routes />
   </Provider>,
   document.getElementById('root'),
-)
+);

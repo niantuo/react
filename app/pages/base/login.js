@@ -13,7 +13,7 @@ import QueuiAnim from 'rc-queue-anim'
 // import '@styles/base.less'
 import '@styles/login.less'
 
-const FormItem = Form.Item
+const FormItem = Form.Item;
 
 @connect((state, props) => ({
   config: state.config,
@@ -88,8 +88,8 @@ export default class Login extends Component {
   // endregion
 
   render() {
-    const { getFieldDecorator } = this.props.form
-    console.log(this.props.loginResponse)
+    const { getFieldDecorator } = this.props.form;
+    console.log(this.props.loginResponse);
     return (
       <div className="login-container">
         <div className="extraLink">

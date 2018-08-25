@@ -10,14 +10,14 @@ export default function configure(initialState) {
   // console.log('initialState', initialState)
   const create = window.devToolsExtension
     ? window.devToolsExtension()(createStore)
-    : createStore
+    : createStore;
 
   const createStoreWithMiddleware = applyMiddleware(
     reduxRouterMiddleware,
     thunkMiddleware,
     logger,
     // router,
-  )(create)
+  )(create);
 
   const store = createStoreWithMiddleware(rootReducer, initialState)
 

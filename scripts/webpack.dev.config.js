@@ -17,7 +17,7 @@ const webpackConfigDev = {
       'process.env.NODE_ENV': JSON.stringify('development'),
       IS_DEVELOPMETN: true,
     }),
-    // 将打包后的资源注入到html文件内    
+    // 将打包后的资源注入到html文件内
     new HtmlWebpackPlugin({
       template: resolve('../app/index.html'),
       mapConfig:'http://41.196.99.30/tgram-pgisbase/config/qdkjdsj_map_config.js'
@@ -34,6 +34,6 @@ const webpackConfigDev = {
     host: '0.0.0.0',
     port: PORT,
   },
-}
+};
 
-module.exports = merge(webpackConfigBase, webpackConfigDev)
+module.exports = merge(webpackConfigBase, webpackConfigDev);

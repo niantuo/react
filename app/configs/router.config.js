@@ -12,21 +12,26 @@ const echarts = (location, cb) => {
   require.ensure([], (require) => {
     cb(null, require('../pages/menu/echarts').default)
   }, 'echarts')
-}
+};
 
 // 测试
 const chat = (location, cb) => {
   require.ensure([], (require) => {
     cb(null, require('../pages/menu/chat').default)
   }, 'chat')
-}
+};
 
 // 编辑器
 const editor = (location, cb) => {
   require.ensure([], (require) => {
     cb(null, require('../pages/menu/editor').default)
   }, 'editor')
-}
+};
+
+/**
+ * 留有配置，这里必须改成动态理由
+ * @return {*}
+ */
 
 export default () => (
   <Router history={hashHistory}>
